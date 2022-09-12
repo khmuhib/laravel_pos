@@ -51,11 +51,10 @@
                                     <td>{{ $user->address }}</td>
                                     <td>
 
-                                        <a href="#" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                                        <a href="{{ route('users.show', $user) }}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
                                         <a href="{{ route('users.edit', $user) }}" class="btn btn-primary"><i
                                                 class="fa fa-edit"></i></a>
-                                        <form action="{{ route('users.destroy', $user) }}" method="POST"
-                                            class="d-inline">
+                                        <form action="{{ route('users.destroy', $user) }}" method="POST" class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger" type="submit"><i

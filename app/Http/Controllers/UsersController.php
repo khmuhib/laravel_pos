@@ -37,9 +37,11 @@ class UsersController extends Controller
     }
 
 
-    public function show(Users $users)
+    public function show(Users $user)
     {
-        //
+        $userGroups = UserGroup::all();
+        $admins = Admin::all();
+        return view('admin.user.show', compact('user', 'userGroups', 'admins'));
     }
 
 
@@ -57,6 +59,7 @@ class UsersController extends Controller
         $user->email = $request->email;
         $user->phone = $request->phone;
         $user->address = $request->address;
+        $user->user_group_id = $request->user_group_id;
 
         if (!$user->save()){
             return redirect()-back();

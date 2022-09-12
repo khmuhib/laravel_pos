@@ -46,7 +46,7 @@
 
                 <div class="form-group">
                     <label>How Create</label>
-                    <select class="custom-select" name="user_group_id" disabled>
+                    <select class="custom-select" name="admin_id" disabled>
 
                         @foreach ($admins as $admin)
                             <option value="{{ $admin->id }}" {{$admin->id == $user->admin_id  ? 'selected' : ''}}>{{ $admin->name }}</option>
