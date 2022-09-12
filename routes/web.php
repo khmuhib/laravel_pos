@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserGroup;
@@ -26,4 +27,5 @@ Route::get('/', function () {
 Route::resource('dashboard', DashboardController::class);
 Route::resource('user-groups', UserGroupController::class);
 Route::resource('users', UsersController::class);
+Route::resource('category', CategoryController::class);
 
