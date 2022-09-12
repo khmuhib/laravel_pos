@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('purchase__items', function (Blueprint $table) {
+        Schema::create('dashboards', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->nullable();
-            $table->foreignId('product_invoice_id')->nullable();
-            $table->string('quantity');
-            $table->double('price');
-            $table->double('total');
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchase__items');
+        Schema::dropIfExists('dashboards');
     }
 };

@@ -5,12 +5,12 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">User</h1>
+    <h1 class="h3 mb-4 text-gray-800">Product Home</h1>
 
     <div class="card shadow mb-4">
         <div class="card-header d-flex justify-content-between pt-4">
-            <h5 class="card-title">User List</h5>
-            <a href="{{ route('users.create') }}" class="btn btn-primary">Add User</a>
+            <h5 class="card-title">Product list</h5>
+            <a href="#" class="btn btn-primary">Add Product</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -52,6 +52,7 @@
                             <td>2011/07/25</td>
                             <td>$170,750</td>
                         </tr>
+
                     </tbody>
                 </table>
             </div>

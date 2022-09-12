@@ -33,6 +33,22 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#group"
+                    aria-expanded="true" aria-controls="group">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>User Group</span>
+                </a>
+                <div id="group" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">User Group Components:</h6>
+                        <a class="collapse-item" href="{{ route('user-groups.index') }}">User Group List</a>
+                        <a class="collapse-item" href="{{ route('user-groups.create') }}">Create User Group</a>
+                    </div>
+                </div>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -42,8 +58,23 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">User Components:</h6>
-                        <a class="collapse-item" href="{{ route('users.index') }}">User List</a>
-                        <a class="collapse-item" href="{{ route('users.create') }}">Create User</a>
+                        <a class="collapse-item" href="">User List</a>
+                        <a class="collapse-item" href="">Create User</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#product"
+                    aria-expanded="true" aria-controls="product">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Product</span>
+                </a>
+                <div id="product" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Product Components:</h6>
+                        <a class="collapse-item" href="">Product List</a>
+                        <a class="collapse-item" href="">Create Product</a>
                     </div>
                 </div>
             </li>
