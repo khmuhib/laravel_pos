@@ -4,6 +4,8 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserGroup;
 use App\Http\Controllers\UserGroupController;
+use App\Http\Controllers\UsersController;
+use App\Models\Users;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,5 @@ Route::get('/', function () {
 
 Route::resource('dashboard', DashboardController::class);
 Route::resource('user-groups', UserGroupController::class);
+Route::resource('users', UsersController::class);
+

@@ -9,34 +9,20 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 
 class UserGroupController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $user_groups = UserGroup::all();
         return view('admin.group.index', compact('user_groups'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
 
         return view('admin.group.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $user_group = $request->all();
@@ -48,35 +34,19 @@ class UserGroupController extends Controller
         return redirect()->route('user-groups.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(UserGroup $userGroup)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(UserGroup $userGroup)
     {
         return view('admin.group.edit', compact('userGroup'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, UserGroup $userGroup)
     {
 
@@ -91,16 +61,11 @@ class UserGroupController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\UserGroup  $userGroup
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(UserGroup $userGroup)
     {
         $userGroup->delete();
 
-        return redirect()->back()->with('message', 'User Group Deleted Successfully');;
+        return redirect()->back()->with('message', 'User Group Deleted Successfully');
     }
 }
